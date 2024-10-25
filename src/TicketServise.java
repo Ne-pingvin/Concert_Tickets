@@ -16,7 +16,8 @@ class Ticket{
  private Instant creationTime;
  private double price;
 
- public Ticket(String id, String concertHall, int eventCode, long time, boolean isPromo, char stadiumSector, double maxWeight, double price){
+ public Ticket(String id, String concertHall, int eventCode, long time, boolean isPromo, char stadiumSector, double maxWeight, double price)
+ {
 this.id = id;
 this.consertHall = concertHall;
 this.eventCode = eventCode;
@@ -27,4 +28,11 @@ this.maxWeight = maxWeight;
 this.price = price;
 this.creationTime = Instant.now();
  }
+    public Ticket(String concertHall, int eventCode, long time)
+    {
+     this.id = concertHall;
+     this.eventCode = eventCode;
+     this.time = time;
+     this.creationTime = Instant.now();
+    }
  }
