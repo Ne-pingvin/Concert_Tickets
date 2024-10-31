@@ -9,7 +9,14 @@ public class TicketService {
         System.out.println();
         Task1();
 
+        Ticket ticket = ticketService.findTicketById("1123");
+        if (ticket != null) {
+            System.out.print("Ticket found: ");
+            ticket.displayInfo();
 
+        } else {
+            System.out.println("Ticket not found.");
+        }
 
     }
     public static void Task1(){
@@ -45,7 +52,14 @@ public class TicketService {
         tickets.add(new Ticket("2123", "Hall4", 104, 1729851247L, true, StadiumSector.B, 5.5, 75.0));
     }
 
-
+    public Ticket findTicketById(String id) {
+        for (Ticket ticket : tickets) {
+            if (ticket.getId().equals(id)) {
+                return ticket;
+            }
+        }
+        return null;
+    }
 }
 enum StadiumSector{
     A,
