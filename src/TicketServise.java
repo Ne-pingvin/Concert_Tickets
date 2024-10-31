@@ -13,6 +13,11 @@ public class TicketServise {
 
     }
 }
+enum StadiumSector{
+    A,
+    B,
+    C
+}
 
 class Ticket{
      private String id;
@@ -48,4 +53,32 @@ class Ticket{
      this.creationTime = Instant.now();
     }
     public Ticket(){}
- }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        if (id.length() <= 4) {
+            this.id = id;
+        }
+    }
+
+    public String getConsertHall() {
+        return consertHall;
+    }
+
+    public void setConsertHall(String consertHall) {
+        if (consertHall.length() <= 10)
+         this.consertHall = consertHall;
+    }
+
+    public int getEventCode() {
+        return eventCode;
+    }
+
+    public void setEventCode(int eventCode) {
+        if (eventCode <= 3)
+         this.eventCode = eventCode;
+    }
+}
