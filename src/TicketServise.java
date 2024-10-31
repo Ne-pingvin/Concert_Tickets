@@ -45,6 +45,7 @@ class Ticket{
     this.price = price;
     this.creationTime = Instant.now();
  }
+
     public Ticket(String concertHall, int eventCode, long time)
     {
      this.id = concertHall;
