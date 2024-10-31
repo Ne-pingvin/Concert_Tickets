@@ -1,6 +1,6 @@
 import java.time.Instant;
 
-public class TicketServise {
+public class TicketService {
     public static void main(String[] args) {
         Ticket empty = new Ticket();
         empty.displayInfo();
